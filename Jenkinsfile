@@ -19,11 +19,11 @@ pipeline {
       }
       stage('Build') {
          steps {
-            sh '''mvn clean package'''
+            bat '''mvn clean package'''
          }
       }
 
-      stage('Build and Push Image') {
+     /* stage('Build and Push Image') {
          steps {
            sh 'docker image build -t ${REPOSITORY_TAG} .'
          }
@@ -33,6 +33,6 @@ pipeline {
           steps {
                     sh 'envsubst < ${WORKSPACE}/deploy.yaml | kubectl apply -f -'
           }
-      }
+      }*/
    }
 }

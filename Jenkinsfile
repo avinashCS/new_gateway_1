@@ -14,7 +14,7 @@ pipeline {
       stage('Preparation') {
          steps {
             cleanWs()
-            git url: https://github.com/avinashCS/new_gateway_1.git
+            git url: "https://github.com/avinashCS/new_gateway_1.git"
          }
       }
       stage('Build') {

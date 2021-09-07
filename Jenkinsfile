@@ -91,7 +91,7 @@ pipeline {
 		steps{
 			bat 'docker image build -t $registry.'
 					}
-			}
+			
 		}
 
 

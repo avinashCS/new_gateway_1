@@ -85,7 +85,8 @@ pipeline {
            
         }
 		
-		          // Building Docker images
+		          
+				  // Building Docker images
 		stage('Building image') {
 		steps{
 			script {
@@ -93,14 +94,7 @@ pipeline {
 					}
 			}
 		}
-	   // Building Docker images
-    stage('Building image') {
-      steps{
-        script {
-          dockerImage = docker.build
-        }
-      }
-    }
+
 
      /* stage('Build and Push Image') {
          steps {

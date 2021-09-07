@@ -89,7 +89,7 @@ pipeline {
 				  // Building Docker images
 		stage('Building image') {
 		steps{
-			bat 'docker image build -t $registry.'
+			bat 'docker image build -t firstimage .'
 					}
 			
 		}

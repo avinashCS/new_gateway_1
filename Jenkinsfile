@@ -80,17 +80,19 @@ pipeline {
                     }
                 }
            
-                // Building Docker images
-    stage('Building image') {
-      steps{
-        script {
-          dockerImage = docker.build
-        }
-      }
-    }
+      
             }
            
         }
+		
+		          // Building Docker images
+		stage('Building image') {
+		steps{
+			script {
+          dockerImage = docker.build
+					}
+			}
+		}
 	   // Building Docker images
     stage('Building image') {
       steps{

@@ -89,8 +89,7 @@ pipeline {
 				  // Building Docker images
 		stage('Building image') {
 		steps{
-			script {
-          dockerImage = docker.build registry
+			bat 'docker image build -t $registry.'
 					}
 			}
 		}
